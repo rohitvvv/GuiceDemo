@@ -4,12 +4,9 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 
 /**
- * Hello world!
+ * Driver program
  *
  */
-
-
-
 
 public class App {
     public static void main( String[] args ) {

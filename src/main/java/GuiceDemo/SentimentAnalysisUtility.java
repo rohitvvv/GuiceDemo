@@ -8,12 +8,17 @@ import com.google.inject.Inject;
 public class SentimentAnalysisUtility {//implements SentimentAnalysis {
     private FactualScore factualScore;
     private SocialSentiment socialSentiment;
+
     @Inject
-    public void SentimentAnalysisUtility(SocialSentiment sentimentObject, FactualScore factualObject) {
+    public SentimentAnalysisUtility(SocialSentiment sentimentObject, FactualScore factualObject) {
         this.factualScore = factualObject;
         this.socialSentiment=sentimentObject;
     }
+
     public boolean getSentiment(){
-        return true;
+        if(0==factualScore.getFactualScore("")&&0==socialSentiment.getCloutScore(""))
+            return true;
+        else
+            return false;
     }
 }
